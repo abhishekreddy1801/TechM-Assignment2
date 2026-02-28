@@ -9,7 +9,6 @@ namespace TechMAssignment
     public class ParaBankTests
     {
         IWebDriver driver;
-        ParaBankMapElements paraBankMapElements; 
 
         [SetUp]
         public void Setup()
@@ -25,7 +24,6 @@ namespace TechMAssignment
             // Optional stability settings
             options.AddArgument("--disable-notifications");
 
-            paraBankMapElements = new ParaBankMapElements(driver);
             driver = new ChromeDriver(options);
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(30);
@@ -108,4 +106,5 @@ namespace TechMAssignment
             driver.Dispose();
         }
     }
+
 }
